@@ -108,7 +108,7 @@ def main(dim):
                 x = v.r[0]+10
                 y = v.r[1]+10
                 point = (point[0]+(x-point[0])*v.fractionx, point[1]+(y-point[1])*v.fractiony)
-                pygame.draw.circle(screen, (0,200,0),point,0)
+                pygame.draw.circle(screen, (0,200,0),(int(point[0]),int(point[1])),0)
 
 
             if movingv != None:

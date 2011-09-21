@@ -27,9 +27,10 @@ def getstring(iterations):
 def main(dim):
     pygame.init()
     screen = pygame.display.set_mode((dim[0], dim[1]))
-
-    import psyco
-    psyco.full()
+    try:
+        import psyco
+        psyco.full()
+    except: "could not find psyco on your system, this'll run a little slower"
     #F -> draw forward
     #+ -> turn right 25 degrees
     #- -> turn left 25 degrees
