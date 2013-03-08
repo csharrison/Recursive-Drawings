@@ -3,6 +3,7 @@ import pygame
 from pygame.locals import *
 from math import *
 
+#create the L system as a sequience of characters
 def getstring(iterations):
     s = ['X']
 

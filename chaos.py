@@ -28,7 +28,7 @@ class Vertex(object):
         
 def main(dim):
     pygame.init()
-    pygame.display.set_caption('Yo')
+    pygame.display.set_caption('The Chaos Game')
     screen = pygame.display.set_mode((dim[0], dim[1]))
     screen.fill((0,0,0))
     black=pygame.Surface(dim)
@@ -50,7 +50,8 @@ def main(dim):
             
         for e in pygame.event.get(): #processes key/mouse inputs
             mx = float(pygame.mouse.get_pos()[0]); my = float(pygame.mouse.get_pos()[1])
-            if e.type == KEYDOWN:
+            if e.type == QUIT: pygame.quit(); sys.exit()
+            elif e.type == KEYDOWN:
                 pygame.draw.rect(screen,(0,0,0),(0,0,dim[0],dim[1]))
                 if e.key == K_ESCAPE: pygame.quit();  sys.exit()
                 elif e.key == K_SPACE:
